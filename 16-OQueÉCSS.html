@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="BaseStyle.css">
+    </head>
+    <body>
+        <header>
+            <h1>O que é o CSS?</h1>  
+            <nav>Section 3 - Folhas de Estilos em Cascata</nav>
+        </header>
+        <div>
+            <article>
+                <h2>O que é CSS?</h2>
+                <p>Conjunto de regras de formatação para estilo das páginas web</p>
+                <p>O nome CSS significa <i>Cascading Style Sheet</i> </p>
+                <hr>
+
+                <h2>Propósito chave</h2>
+                <p>Separar <b style="color: red; font-size: 35px;">conteúdo</b> da <b style="color: red; font-size: 35px;">aparência!</b> </p>
+                <hr>
+
+                <h2>Ordem de prioridade para as mais diferentes formas de estilização (menor prioridade para maior prioridade): </h2>
+                <ol>
+                    <li>Folha de estilo padrão do navegador;</li>
+                    <li>Folha de estilo do usuário;</li>
+                    <li> Folha de estilo do desenvolvedor:
+                        <ol>
+                            <li>Estilo externo (importado);</li>
+                            <li>Estilo incorporado (definido no head ou no body);</li>
+                            <li>Estilo inline (dentro de um elemento);</li>
+                            
+                        </ol> 
+                    <li>Marcação !important; </li>
+                    </li>
+                </ol>
+                <hr>
+
+                <h2>Declarando códigos CSS</h2>
+                <ol> Há três formas:
+                    <li>
+                        <h3>Inline</h3>
+                        <p>Feito diretamente na tag</p>
+                        <div id="ex">
+                            <p>Ex.: '<'div style="color:red;">' <b style="color:red;">Meu texto</b> <'/div'> </p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <h3>Tag '<'style'>'</h3>
+                        <p>A estilização é feita através da tag <'style'></'style'> declarada dentro da tag <'html'> </p>
+                        <div id='ex'>
+                            <p>Ex.: 
+                                <p>
+                                    <'head'>
+                                        <p>
+                                            <'style>'
+                                                p {
+                                                    color:red;
+                                                }
+                                            <'/style'>
+                                        </p>
+                                    <'/head'> <br>
+                                    <'body'>
+                                        <p>
+                                            <'p'> <b style="color:red;">Meu texto</b> <'/p'>
+                                        </p>
+                                    <'/body'>
+                                    
+                                </p>
+                            </p>
+                        </div>
+                    </li>
+                    <li> 
+                        <h3> Importação </h3>
+                        <p>Estilo que é importado de um arquivo ".css"</p>
+                        <div id="ex">
+                            <p>Ex.: 
+                                <p>
+                                    <p><'head'></p>
+                                    <p>
+                                        <p><'link' rel="stylesheet" type="text/css" href="style.css"></p>
+                                    </p>
+                                    <p><'/head'></p>
+                                </p>
+                            </p>
+                        </div>
+                    </li>
+                </ol>
+
+                <h2>Sintaxe</h2>
+                <p>A sintaxe é simples: </p>
+                <ul>
+                    <li>Há um seletor que pode ser uma classe, um id ou uma tag;</li>
+                    <li>Há uma declaração que é a característica que quer ser alterada e há um valor que é como a característica será mudada </li>
+                </ul>
+                <div id="ex2">
+                    <p>Ex.: 
+                        <p>seletor{</p>
+                            <p>declaração:valor;</p>
+                        <p>}</p>
+                    </p>
+                </div>
+
+                <h2>Diferença entre Classes e Ids</h2>
+                <ol>
+                    <li>Ids
+                        <ul>
+                            <li>identificadores <b>únicos</b>;</li>
+                            <li>declarados com <b>#</b></li>
+                            <li>Urls
+                                <ul>
+                                    <li id="ex">Ex.: www.site.com/#id</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Classes
+                        <ul>
+                            <li>Apresenta um estilo a um <b>grupo de elementos</b>;</li>
+                            <li>declarado com <b>.</b>;</li>
+                        </ul>
+                    </li>
+                </ol>
+            </article>
+        </div>
+        <footer></footer>
+    </body>
+</html> 

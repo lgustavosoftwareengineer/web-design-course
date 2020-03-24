@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title> Section 3 - Divs </title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="BaseStyle.css">
+        <style>
+            header {
+                background-color: green;
+                height: 100px;
+            }
+
+            div {
+                
+            }
+
+            /*Chamando por ID(#)*/
+            #div_esquerda {
+                background-color: red;
+                min-height: 200px;
+                width:60%;
+                float: left; /*Essa propriedade força a #div_esquerda a ficar a esquerda da #div_direita*/
+            }
+            #div_direita {
+                background-color: yellow;
+                min-height: 200px;
+                width:40%;
+                float: right; /*Essa propriedade força a #div_direita a ficar a direita da #div_esquerca*/
+            }
+
+            footer {
+                clear: both; /*Ele anula a propriedade float deixando a div a baixo-que no caso é esta- aparecer;*/
+                background-color: blue;
+                height: 40px;
+            }
+
+        </style>
+    </head>
+    
+    <body>
+        <!--Cabeçalho-->
+        <header>
+            <h1> Section 3 - Divs </h1>
+        </header>
+        <!--Fim do cabeçalho-->
+        
+        <div>
+            <div id="div_esquerda"> sjsjs </div>
+            <div id="div_direita"> sdsda </div>
+        </div>
+
+        <footer></footer>
+    </body>
+
+
+</html>

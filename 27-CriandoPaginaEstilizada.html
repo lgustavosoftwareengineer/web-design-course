@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <title>Section 3 - Criando Página Estilizada</title>
+        <meta charset="utf-8">
+        <style>
+
+        *{
+            margin:0;
+            padding:0;
+            font-family: Helvetica, arial;
+        }
+        header{
+            height:80px;
+            background-color:#35b8b0;
+            padding: 20px;
+        }
+        footer{
+            clear: both;
+            height:50px;
+            background-color:#35b8b0;
+            text-align: center;
+            padding:10px;
+            text-shadow: 1px 1px 1px #111111;
+            font-size:12px;
+            }
+        h1 {
+            color:#FF7F50;
+            text-shadow: 1px 1px 1px #111111;
+            text-align:center;
+            margin:0px 0px 50px 0px;
+        }
+        p {
+            color:#ffff;
+            text-shadow: 1px 1px 1px #111111;
+            font-size: 15px;
+            font-family: asdf, arial, "Times new roman";
+            
+        }
+        #div_principal{
+            background-image: url("city.jpeg");
+            background-size: 100%;
+            min-height: 600px;
+            padding:80px 0px 0px 0px;
+            clear: both;
+        }
+        #log{
+            float:left;
+        }
+        #menu{
+            margin-top:30px;
+            float:right;
+        }
+
+        #menu a{
+            padding: 52px 20px;
+            text-decoration: none;
+            color: #111; 
+            text-shadow: 1px 1px #111111;
+        }
+
+        #menu a:hover{
+            background-color:#29b0c4; 
+            color: #35b8b0;
+        }
+
+        .container{
+            width: 960px;
+            margin: 0 auto;
+        }
+        .efeito{
+            background-color:rgba(0,0,0,0.5);
+            padding: 80px 0 80px 0;
+        }
+        </style>
+    </head>
+    <body>
+            <header> 
+                <div class="container">
+                    <div id="logo">
+                        <img src="logo.svg" alt="">
+                        <div id="menu">
+                        <a href="#">Home</a>
+                        <a href="#">Quem somos</a>
+                        <a href="#">Serviços</a>
+                        <a href="#">Fale conosco</a>
+                    </div>
+                    </div>
+                    
+                </div>
+            </header>
+            <div id="div_principal">
+                <div class="efeito">
+                    <div class="container">
+                        <h1>Bem-vindo</h1>
+                        <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mauris nisi, pulvinar eu nisl commodo, pretium placerat turpis. Nulla ut euismod justo. Suspendisse euismod diam sed odio sagittis venenatis vitae a nisi. Cras hendrerit leo ac ullamcorper varius. Nulla facilisi. Vivamus eu nisl aliquam, tempus turpis vel, feugiat tortor. Nulla mollis aliquam arcu quis suscipit. Proin vehicula id justo et mollis.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <footer>Desenvolvido por Luiz</footer>
+    </body>
+    
+
+</html>

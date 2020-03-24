@@ -1,0 +1,17 @@
+/*Arquivo CSS base para a estilização dos meus resumos do curso de Web Design*/
+
+#ex {
+    color:#a316db;
+}
+#ex2 {
+    color:#a316db;
+    margin: 0px 0px 0px 20px;
+}
+b {
+    color:red;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}

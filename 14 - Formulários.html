@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Section 2 - Fundamentos do HTML - Formulários</title>
+</head>
+<body>
+    <head></head>
+    <div>
+        <!--A tag form possui alguns atributos, por exemplo, que são: o atributo action que indica onde eu quero jogar
+        a informação e o atributo method que pode ser post e get em que no get á informação é mandada pela
+        url e o post ela é encriptada e é enviada ocultamente -->
+        <form action="processa.php" method="post">
+            <!--Existe elementos que ficam dentro da tag form como: -->
+                
+            <!--Como os inputs que possui os atriutos type que diz qual o tipo do input,
+                o atributo name que é o nome do input e o placeholder que serve como uma dica para
+                o que que eu devo por naquele input, como senha, nome e etc...-->
+                <label>Input tipo: <b>Text</b> </label>
+                
+                <!--Espaço-->
+                <br>
+                <!--Fim do espaço-->
+
+                <input type="text" name="texto1" placeholder="Eu sou um input tipo text">
+                <hr>
+                
+                <!--O input do type password é muito util pois como o nome diz ele serve para senhas, ele oculta as informações-->
+                <label>Input tipo: <b>Password</b> </label>
+                
+                <!--Espaço-->
+                <br>
+                <!--Fim do espaço-->
+
+                <input type="password" name="senha">
+                <hr>
+                <!--Há também o input do type hidden que é oculto-->
+                <label>Input tipo <b>Hidden</b> </label>
+                
+                <!--Espaço-->
+                <br>
+                <!--Fim do espaço-->
+                
+                <input type="hidden" name="informaçao_oculta" value="mensagem oculta">
+
+                <!--Há os inputs do tipo select também-->
+                <select name="seleçao">
+                    <option value="1">Opção 1</option>
+                    <option value="2">Opção 2</option>
+                </select>
+
+                <!--Espaço-->
+                <br>
+                <!--Fim do espaço-->
+
+                <!--Há os inputs do tipo rádio, os quais só deixam eu selecionar um radio por vez, ou uma bolinha por vez-->
+                <input type="radio" name="radio1" value="1">Valor 1
+                <input type="radio" name="radio2" value="2">Valor 2 
+
+                <!--Espaço-->
+                <br>
+                <!--Fim do espaço-->
+                
+                <!--Há o input do tipo checkbox, em que o nome entre as opções devem ser o mesmo-é algo compartilhado- e também possui o atributo checked para
+                que a opção já seja marcada como padrão -->
+                <input type="checkbox" name="ck1" value="1">Valor 1
+                <input type="checkbox" name="ck1" value="2">Valor 2
+                
+                <!--Espaço-->
+                <br>
+                <!--Fim do espaço-->
+                
+                <!--Serve para enviar as informações recolhidas pelos inputs para o action, definido no formulário, podendo assim ser feito o processamento das informações-->
+                <input type="submit" value="Enviar" name="submit">
+        </form>
+    </div>
+    <footer></footer>
+</body>
+</html>
