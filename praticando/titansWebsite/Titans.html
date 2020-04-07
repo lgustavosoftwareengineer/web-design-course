@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Section 5 - Imagens Responsivas</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <style>
+            /*Estilização do corpo: adicionando o background-com algumas especificações- e cor da fonte*/
+                body{
+                    background-image: url("https://pbs.twimg.com/media/EENjvzdXUAc4lBT?format=jpg&name=large");
+                    background-attachment: scroll;
+                    background-size: 100%;
+                    background-repeat:repeat;
+                    background-color: #000;
+                    color:#fff;
+                    
+                }
+            
+            /*Estilização que muda o background do fundo quando as dimensões da tela for menos que 750px*/
+                @media only screen and (max-width: 768px) {
+                body {
+                    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgb(226, 220, 220)), to(transparent));
+                    background-image: -webkit-linear-gradient(rgb(231, 36, 36), transparent);
+                    background-image: -moz-linear-gradient(rgb(231, 36, 36), transparent);
+                    background-image: -o-linear-gradient(rgb(231, 36, 36), transparent);
+                    font-weight: bold;
+                    }
+                }
+            /*Classes responsável pela estilização do degrade da barra de navegação*/
+                .knockout-top-to-bottom {
+                position: relative; 
+                }
+                .knockout-top-to-bottom:before, .knockout-top-to-bottom:after {
+                content: "";
+                position: absolute;
+                }
+                .knockout-top-to-bottom:before {
+                top: -3px;
+                left: -3px;
+                bottom: 0;
+                right: -3px;
+                background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgb(231, 36, 36)), to(transparent));
+                background-image: -webkit-linear-gradient(rgb(231, 36, 36), transparent);
+                background-image: -moz-linear-gradient(rgb(231, 36, 36), transparent);
+                background-image: -o-linear-gradient(rgb(231, 36, 36), transparent);
+                z-index: -2;
+                }
+                .knockout-top-to-bottom:after {
+                z-index: -1;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                }
+            /*Adicionando padding a media*/ 
+            div.media{
+                padding: 20px;
+            }
+        </style>
+    </head>
+    <body> 
+        <!--Barra de navegação no topo da tela-->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark knockout-top-to-bottom ">
+          <!--Div container que deixa tudo responsivo-->  
+            <div class="container">
+                <!--Logo do site-->
+                    <a class="navbar-brand" href="https://en.wikipedia.org/wiki/Titans_(2018_TV_series)">
+                    <img src="./logo.png" class="img-responsive" height="40">
+                    </a>
+                <!--Fim do logo do site-->
+
+                <!--Botão toggler que só aparece em certa resolução-->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                <!--Fim do Botão toggler que só aparece em certa resolução-->
+
+            <!--Parte que desce quando eu aperto o botão toggler que aparece em certa resolução-->
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                <!--Barra de navegação-->
+                    <!--Elemento de navegação perto da logo-->
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                            <a class="nav-link" href="#"></a>
+                            </li>
+                        </ul>
+                    <!--Fim do Elemento de navegação perto da logo-->
+
+                    <!--Elemento de navegação 2 que é onde fica todas as páginas-->
+                        <ul class="navbar-nav">
+                            <!--Link para página 1-->
+                                <li class="nav-item">
+                                <a class="nav-link" href="#">fsdfsdfsd</a>
+                                </li>
+                            <!--Fim do Link para página 1-->
+                            
+                            <!--Link para página 2-->
+                                <li class="nav-item">
+                                <a class="nav-link" href="#">dfsdfsfsdf</a>
+                                </li>
+                            <!--Fim do Link para página 1-->                        
+                        </ul>
+                    <!--Fim do Elemento de navegação 2 que é onde fica todas as páginas-->
+                <!--Fim da barra de navegação-->
+                </div>
+            <!--Fim da Parte que desce quando eu aperto o botão toggler que aparece em certa resolução-->
+            </div>
+        </nav>
+        <div class="container">
+            <div class="media">
+                <img class="align-self-center mr-3 rounded-circle" src="https://i.pinimg.com/originals/4e/f4/36/4ef4364546beffe34e682c660a3f9c68.jpg" height="100px">
+                <div class="media-body">
+                  <h5 class="mt-0">Mídia alinhada ao topo</h5>
+                  <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+                  <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                </div>
+            </div>
+            <div class="media">
+                <img class="align-self-center mr-3 rounded-circle" src="https://i.pinimg.com/originals/4e/f4/36/4ef4364546beffe34e682c660a3f9c68.jpg" height="100px">
+                <div class="media-body">
+                  <h5 class="mt-0">Mídia alinhada ao topo</h5>
+                  <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+                  <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                </div>
+            </div>
+            <div class="media">
+                <img class="align-self-center mr-3 rounded-circle" src="https://i.pinimg.com/originals/4e/f4/36/4ef4364546beffe34e682c660a3f9c68.jpg" height="100px">
+                <div class="media-body">
+                  <h5 class="mt-0">Mídia alinhada ao topo</h5>
+                  <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+                  <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                </div>
+            </div>
+            <div class="media">
+                <img class="align-self-center mr-3 rounded-circle" src="https://i.pinimg.com/originals/4e/f4/36/4ef4364546beffe34e682c660a3f9c68.jpg" height="100px">
+                <div class="media-body">
+                  <h5 class="mt-0">Mídia alinhada ao topo</h5>
+                  <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+                  <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                </div>
+            </div>
+        </div>
+        <!--Fim da Barra de navegação no topo da tela-->
+        
+        <footer>
+            <!-- JAVASCRIPT -->
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        </footer> 
+    </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Section 5 - Formulários</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <style>
+            #first{
+                background-color:blue;
+            }
+            #second{
+                background-color:green;
+            }
+            #thirth{
+                background-color:yellowgreen;
+            }
+        </style>
+    </head>
+    <body>
+        <header></header>
+        <div class="container" >
+           <h1>Formulalários</h1>
+           <!--Tag forms que serve para se receber informações-->
+                <form>
+                    <!--Espécie de container que serve para armazenar botões-->
+                    <div class="btn-group">
+                        <a href="#" class="btn btn-primary">Botão 1</a>
+                        <a href="#" class="btn btn-dark">Botão 2</a>
+                        <a href="#" class="btn btn-outline-dark">Botão 3</a>
+                        <a href="#" class="btn btn-outline-success">Botão 4</a>
+                    </div>
+                    <!--Fim de espécie de container que serve para armazenar botões-->
+                    <br><br>
+
+                    <!--Espécie de container que serve para armazenar inputs-->
+                        <!--Exemplo que mostra uma variante do input-group para adicionar valores "complets" para determinado inputs,
+                        a classe input-group-append que adiciona no final.Esse exemplo é o de "e-mail" -->
+                    <div class="input-group">
+                        <!--Input com a classe padrão para elementos de um formulário: "form-control"-->
+                        <input type="text" name="" class="form-control" placeholder="Digite seu e-mail aqui">
+                        <!--Espécie de "tip" que é adicionada no final do input com a classe: "input-group-append"-->
+                        <div class="input-group-append">
+                            <!--"Tip" que utiliza a classe "input-group-text"-->
+                            <span class="input-group-text">@luiz.com</span>
+                        </div>
+                    </div>
+                    <!--Fim de espécie de container que serve para armazenar inputs-->
+                    <br>
+
+                    <!--Espécie de container que serve para armazenar inputs-->
+                        <!--Exemplo que mostra uma variante do input-group para adicionar valores "complets" para determinado inputs,
+                        só que no INÍCIO, com a classe input-group-pretend. Esse exemplo é o de "dinheiro" -->
+                    <div class="input-group">
+                        <!--Classe "input-group-prepend" para adicionar a "tip" no início-->
+                        <div class="input-group-prepend">
+                            <!--"Tip" que se faz utilizando a classe "input-group-text"-->
+                            <span class="input-group-text">R$</span>
+                        </div>
+                        <!--Input que se utiliza a classe "form-control", classe padrão para elementos de um formulário-->
+                        <input type="number" name="" class="form-control" placeholder="Digite o valor aqui">
+                    </div>
+                    <!--Fim da espécie de container que serve para armazenar inputs-->
+                    
+                </form>
+           <!--Fim da Tag forms que serve para se receber informações-->
+        </div>
+        
+        <footer>
+            <!-- JAVASCRIPT -->
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        </footer>
+    </body>
+</html>
