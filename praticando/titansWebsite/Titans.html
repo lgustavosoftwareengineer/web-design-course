@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Section 5 - Imagens Responsivas</title>
+        <title>TitansWebSite</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -28,41 +28,61 @@
                     font-weight: bold;
                     }
                 }
-            /*Classes responsável pela estilização do degrade da barra de navegação*/
-                .knockout-top-to-bottom {
-                position: relative; 
+                /*Definindo o tamanho da barra de navegação do top quando ela estiver maior que 768px
+                Para assim não afetar a barra que desce quando a tela está menor que 768px
+                */
+                @media only screen and (min-width: 768px) {
+                nav {
+                    height: 100px;
+                    }
                 }
-                .knockout-top-to-bottom:before, .knockout-top-to-bottom:after {
-                content: "";
-                position: absolute;
+            
+            /*Adicionando padding a media*/ 
+                div.media{
+                    padding: 20px;
+            }
+            /*Deffining the degrade of the footer*/
+                footer{
+                    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgb(231, 36, 36)), to(transparent));
+                    background-image: -webkit-linear-gradient(rgb(231, 36, 36), transparent);
+                    background-image: -moz-linear-gradient(rgb(231, 36, 36), transparent);
+                    background-image: -o-linear-gradient(rgb(231, 36, 36), transparent);
+                    background-color: #000;
+                    
                 }
-                .knockout-top-to-bottom:before {
-                top: -3px;
-                left: -3px;
-                bottom: 0;
-                right: -3px;
+            /*Take off the apparence of link from the tag a*/
+                a{
+                    color: inherit;
+
+                }
+                /*clicked*/
+                a:active {
+                color: black;
+                }
+                /* mouse over */
+                a:hover {
+                    color: #000000;
+                }
+            /*Addin' degrade in the navbar on top*/
+            nav {
                 background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgb(231, 36, 36)), to(transparent));
                 background-image: -webkit-linear-gradient(rgb(231, 36, 36), transparent);
                 background-image: -moz-linear-gradient(rgb(231, 36, 36), transparent);
                 background-image: -o-linear-gradient(rgb(231, 36, 36), transparent);
-                z-index: -2;
-                }
-                .knockout-top-to-bottom:after {
-                z-index: -1;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                right: 0;
-                }
-            /*Adicionando padding a media*/ 
-            div.media{
-                padding: 20px;
+                background-color: #000;
+                
             }
+            /*Addin' padding to the content of the center*/
+            #container-center{
+                margin-top: 100px; 
+                
+            }
+            
         </style>
     </head>
     <body> 
         <!--Barra de navegação no topo da tela-->
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark knockout-top-to-bottom ">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top ">
           <!--Div container que deixa tudo responsivo-->  
             <div class="container">
                 <!--Logo do site-->
@@ -108,47 +128,175 @@
             <!--Fim da Parte que desce quando eu aperto o botão toggler que aparece em certa resolução-->
             </div>
         </nav>
-        <div class="container">
-            <div class="media">
-                <img class="align-self-center mr-3 rounded-circle" src="https://i.pinimg.com/originals/4e/f4/36/4ef4364546beffe34e682c660a3f9c68.jpg" height="100px">
-                <div class="media-body">
-                  <h5 class="mt-0">Mídia alinhada ao topo</h5>
-                  <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-                  <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+        <div class="container-fluid" id="container-center">
+            <div class="row p-2">
+                <div class="col-3">
+                    <div class="card text-white bg-dark mb-3">
+                        <div class="card-header">Robin</div>
+                        <img src="https://i.pinimg.com/originals/4e/f4/36/4ef4364546beffe34e682c660a3f9c68.jpg" width="15px" class="card-img-top img-fluid img-thumbnail">
+                        <div class="card-body">
+                            <h5 class="card-title"></h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis felis ut ultricies volutpat. Donec eu tellus non mi placerat consequat quis sit amet eros. Pellentesque non nulla luctus, tempor augue quis, efficitur lacus. Vivamus aliquam risus enim, pellentesque porta nulla facilisis in. Vestibulum mi nisl, tincidunt et quam eget, varius lacinia metus. Curabitur at sapien nulla. Maecenas metus nisl, aliquam ut commodo a, pulvinar elementum est. Cras iaculis auctor euismod. Nunc quam dolor, commodo sed lacinia nec, dignissim vitae nibh. Cras at euismod ex, eget congue augue. Sed quis augue sem. Curabitur ante tortor, consectetur ut nunc id, ullamcorper varius elit.</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="media">
-                <img class="align-self-center mr-3 rounded-circle" src="https://i.pinimg.com/originals/4e/f4/36/4ef4364546beffe34e682c660a3f9c68.jpg" height="100px">
-                <div class="media-body">
-                  <h5 class="mt-0">Mídia alinhada ao topo</h5>
-                  <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-                  <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+
+                <div class="col-3">
+                    <div class="card text-white bg-dark mb-3">
+                        <div class="card-header">Robin</div>
+                        <img src="https://i.pinimg.com/originals/4e/f4/36/4ef4364546beffe34e682c660a3f9c68.jpg" width="15px" class="card-img-top img-fluid img-thumbnail">
+                        <div class="card-body">
+                            <h5 class="card-title"></h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis felis ut ultricies volutpat. Donec eu tellus non mi placerat consequat quis sit amet eros. Pellentesque non nulla luctus, tempor augue quis, efficitur lacus. Vivamus aliquam risus enim, pellentesque porta nulla facilisis in. Vestibulum mi nisl, tincidunt et quam eget, varius lacinia metus. Curabitur at sapien nulla. Maecenas metus nisl, aliquam ut commodo a, pulvinar elementum est. Cras iaculis auctor euismod. Nunc quam dolor, commodo sed lacinia nec, dignissim vitae nibh. Cras at euismod ex, eget congue augue. Sed quis augue sem. Curabitur ante tortor, consectetur ut nunc id, ullamcorper varius elit.</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="media">
-                <img class="align-self-center mr-3 rounded-circle" src="https://i.pinimg.com/originals/4e/f4/36/4ef4364546beffe34e682c660a3f9c68.jpg" height="100px">
-                <div class="media-body">
-                  <h5 class="mt-0">Mídia alinhada ao topo</h5>
-                  <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-                  <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+
+                <div class="col-3">
+                    <div class="card text-white bg-dark mb-3">
+                        <div class="card-header">Robin</div>
+                        <img src="https://i.pinimg.com/originals/4e/f4/36/4ef4364546beffe34e682c660a3f9c68.jpg" width="15px" class="card-img-top img-fluid img-thumbnail">
+                        <div class="card-body">
+                            <h5 class="card-title"></h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis felis ut ultricies volutpat. Donec eu tellus non mi placerat consequat quis sit amet eros. Pellentesque non nulla luctus, tempor augue quis, efficitur lacus. Vivamus aliquam risus enim, pellentesque porta nulla facilisis in. Vestibulum mi nisl, tincidunt et quam eget, varius lacinia metus. Curabitur at sapien nulla. Maecenas metus nisl, aliquam ut commodo a, pulvinar elementum est. Cras iaculis auctor euismod. Nunc quam dolor, commodo sed lacinia nec, dignissim vitae nibh. Cras at euismod ex, eget congue augue. Sed quis augue sem. Curabitur ante tortor, consectetur ut nunc id, ullamcorper varius elit.</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="media">
-                <img class="align-self-center mr-3 rounded-circle" src="https://i.pinimg.com/originals/4e/f4/36/4ef4364546beffe34e682c660a3f9c68.jpg" height="100px">
-                <div class="media-body">
-                  <h5 class="mt-0">Mídia alinhada ao topo</h5>
-                  <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-                  <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+
+                <div class="col-3">
+                    <div class="card text-white bg-dark mb-3">
+                        <div class="card-header">Robin</div>
+                        <img src="https://i.pinimg.com/originals/4e/f4/36/4ef4364546beffe34e682c660a3f9c68.jpg" width="15px" class="card-img-top img-fluid img-thumbnail">
+                        <div class="card-body">
+                            <h5 class="card-title"></h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis felis ut ultricies volutpat. Donec eu tellus non mi placerat consequat quis sit amet eros. Pellentesque non nulla luctus, tempor augue quis, efficitur lacus. Vivamus aliquam risus enim, pellentesque porta nulla facilisis in. Vestibulum mi nisl, tincidunt et quam eget, varius lacinia metus. Curabitur at sapien nulla. Maecenas metus nisl, aliquam ut commodo a, pulvinar elementum est. Cras iaculis auctor euismod. Nunc quam dolor, commodo sed lacinia nec, dignissim vitae nibh. Cras at euismod ex, eget congue augue. Sed quis augue sem. Curabitur ante tortor, consectetur ut nunc id, ullamcorper varius elit.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <!--Fim da Barra de navegação no topo da tela-->
+        <!-- Footer -->
+            <footer class="page-footer font-small position-relative flex-row">
+
+                <!-- Footer Links -->
+                <div class="container">
+            
+                <!-- Grid row-->
+                <div class="row text-center d-flex justify-content-center pt-5 mb-3">
+            
+                    <!-- Grid column -->
+                    <div class="col-md-2 mb-3">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <a href="#!">About us</a>
+                    </h6>
+                    </div>
+                    <!-- Grid column -->
+            
+                    <!-- Grid column -->
+                    <div class="col-md-2 mb-3">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <a href="#!">Products</a>
+                    </h6>
+                    </div>
+                    <!-- Grid column -->
+            
+                    <!-- Grid column -->
+                    <div class="col-md-2 mb-3">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <a href="#!">Awards</a>
+                    </h6>
+                    </div>
+                    <!-- Grid column -->
+            
+                    <!-- Grid column -->
+                    <div class="col-md-2 mb-3">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <a href="#!">Help</a>
+                    </h6>
+                    </div>
+                    <!-- Grid column -->
+            
+                    <!-- Grid column -->
+                    <div class="col-md-2 mb-3">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <a href="#!">Contact</a>
+                    </h6>
+                    </div>
+                    <!-- Grid column -->
+            
+                </div>
+                <!-- Grid row-->
+                <hr class="rgba-white-light" style="margin: 0 15%;">
+            
+                <!-- Grid row-->
+                <div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
+            
+                    <!-- Grid column -->
+                    <div class="col-md-8 col-12 mt-5">
+                    <p style="line-height: 1.7rem"></p>
+                    </div>
+                    <!-- Grid column -->
+            
+                </div>
+                <!-- Grid row-->
+                <hr class="clearfix d-md-none rgba-white-light" style="margin: 10% 15% 5%;">
+            
+                <!-- Grid row-->
+                <div class="row pb-3">
+            
+                    <!-- Grid column -->
+                    <div class="col-md-12">
+            
+                    <div class="mb-5 flex-center">
+            
+                        <!-- Facebook -->
+                        <a class="fb-ic">
+                        <i class="fab fa-facebook-f fa-lg white-text mr-4"> </i>
+                        </a>
+                        <!-- Twitter -->
+                        <a class="tw-ic">
+                        <i class="fab fa-twitter fa-lg white-text mr-4"> </i>
+                        </a>
+                        <!-- Google +-->
+                        <a class="gplus-ic">
+                        <i class="fab fa-google-plus-g fa-lg white-text mr-4"> </i>
+                        </a>
+                        <!--Linkedin -->
+                        <a class="li-ic">
+                        <i class="fab fa-linkedin-in fa-lg white-text mr-4"> </i>
+                        </a>
+                        <!--Instagram-->
+                        <a class="ins-ic">
+                        <i class="fab fa-instagram fa-lg white-text mr-4"> </i>
+                        </a>
+                        <!--Pinterest-->
+                        <a class="pin-ic">
+                        <i class="fab fa-pinterest fa-lg white-text"> </i>
+                        </a>
+            
+                    </div>
+            
+                    </div>
+                    <!-- Grid column -->
+            
+                </div>
+                <!-- Grid row-->
+            
+                </div>
+                <!-- Footer Links -->
+            
+                <!-- Copyright -->
+                <div class="footer-copyright text-center py-3">© 2020 Copyright:
+                <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+                </div>
+                <!-- Copyright -->
+                <!-- JAVASCRIPT -->
+                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+            </footer>
+      <!-- Footer -->   
         
-        <footer>
-            <!-- JAVASCRIPT -->
-            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        </footer> 
     </body>
 </html>
