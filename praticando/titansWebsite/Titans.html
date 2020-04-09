@@ -77,6 +77,18 @@
                 margin-top: 100px; 
                 
             }
+            /**/
+            .card{
+                display: flex;
+            }
+            #img.container img {
+                width: 50%; height: 50%;
+                transition: transform 1s ease;
+               
+            }
+            #img.container:hover img{
+                transform: scale(1.5) rotate(20deg);
+            }
             
         </style>
     </head>
@@ -129,11 +141,25 @@
             </div>
         </nav>
         <div class="container-fluid" id="container-center">
-            <div class="row p-2">
-                <div class="col-3">
+            <div class="flex-row p-2">
+                <div class="row justify-content-center">
                     <div class="card text-white bg-dark mb-3">
                         <div class="card-header">Robin</div>
-                        <img src="https://i.pinimg.com/originals/4e/f4/36/4ef4364546beffe34e682c660a3f9c68.jpg" width="15px" class="card-img-top img-fluid img-thumbnail">
+                        <div class="container" id="img" >
+                            <img src="https://i.pinimg.com/originals/4e/f4/36/4ef4364546beffe34e682c660a3f9c68.jpg" width="15px" class="card-img-top img-fluid img-thumbnail">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title"></h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis felis ut ultricies volutpat. Donec eu tellus non mi placerat consequat quis sit amet eros. Pellentesque non nulla luctus, tempor augue quis, efficitur lacus. Vivamus aliquam risus enim, pellentesque porta nulla facilisis in. Vestibulum mi nisl, tincidunt et quam eget, varius lacinia metus. Curabitur at sapien nulla. Maecenas metus nisl, aliquam ut commodo a, pulvinar elementum est. Cras iaculis auctor euismod. Nunc quam dolor, commodo sed lacinia nec, dignissim vitae nibh. Cras at euismod ex, eget congue augue. Sed quis augue sem. Curabitur ante tortor, consectetur ut nunc id, ullamcorper varius elit.</p>
+                        </div>
+                    </div>
+                </div>
+                    
+
+                <div class="flex-row">
+                    <div class="card text-white bg-dark mb-3">
+                        <div class="card-header">Ravenna</div>
+                        <img src="https://pm1.narvii.com/6812/24d070fb5c184b4a09f6a1c99a9964ba7a8088e2v2_hq.jpg" width="15px" class="card-img-top img-fluid img-thumbnail">
                         <div class="card-body">
                             <h5 class="card-title"></h5>
                             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis felis ut ultricies volutpat. Donec eu tellus non mi placerat consequat quis sit amet eros. Pellentesque non nulla luctus, tempor augue quis, efficitur lacus. Vivamus aliquam risus enim, pellentesque porta nulla facilisis in. Vestibulum mi nisl, tincidunt et quam eget, varius lacinia metus. Curabitur at sapien nulla. Maecenas metus nisl, aliquam ut commodo a, pulvinar elementum est. Cras iaculis auctor euismod. Nunc quam dolor, commodo sed lacinia nec, dignissim vitae nibh. Cras at euismod ex, eget congue augue. Sed quis augue sem. Curabitur ante tortor, consectetur ut nunc id, ullamcorper varius elit.</p>
@@ -141,10 +167,10 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="flex-row">
                     <div class="card text-white bg-dark mb-3">
-                        <div class="card-header">Robin</div>
-                        <img src="https://i.pinimg.com/originals/4e/f4/36/4ef4364546beffe34e682c660a3f9c68.jpg" width="15px" class="card-img-top img-fluid img-thumbnail">
+                        <div class="card-header">Mutano</div>
+                        <img src="https://3.bp.blogspot.com/--ySvIOrMPlQ/VURst4FbEpI/AAAAAAAAcoI/rwNseGsCXOY/s1600/Mutano.png" width="15px" class="card-img-top img-fluid img-thumbnail">
                         <div class="card-body">
                             <h5 class="card-title"></h5>
                             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis felis ut ultricies volutpat. Donec eu tellus non mi placerat consequat quis sit amet eros. Pellentesque non nulla luctus, tempor augue quis, efficitur lacus. Vivamus aliquam risus enim, pellentesque porta nulla facilisis in. Vestibulum mi nisl, tincidunt et quam eget, varius lacinia metus. Curabitur at sapien nulla. Maecenas metus nisl, aliquam ut commodo a, pulvinar elementum est. Cras iaculis auctor euismod. Nunc quam dolor, commodo sed lacinia nec, dignissim vitae nibh. Cras at euismod ex, eget congue augue. Sed quis augue sem. Curabitur ante tortor, consectetur ut nunc id, ullamcorper varius elit.</p>
@@ -152,21 +178,10 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="flex-row">
                     <div class="card text-white bg-dark mb-3">
-                        <div class="card-header">Robin</div>
-                        <img src="https://i.pinimg.com/originals/4e/f4/36/4ef4364546beffe34e682c660a3f9c68.jpg" width="15px" class="card-img-top img-fluid img-thumbnail">
-                        <div class="card-body">
-                            <h5 class="card-title"></h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis felis ut ultricies volutpat. Donec eu tellus non mi placerat consequat quis sit amet eros. Pellentesque non nulla luctus, tempor augue quis, efficitur lacus. Vivamus aliquam risus enim, pellentesque porta nulla facilisis in. Vestibulum mi nisl, tincidunt et quam eget, varius lacinia metus. Curabitur at sapien nulla. Maecenas metus nisl, aliquam ut commodo a, pulvinar elementum est. Cras iaculis auctor euismod. Nunc quam dolor, commodo sed lacinia nec, dignissim vitae nibh. Cras at euismod ex, eget congue augue. Sed quis augue sem. Curabitur ante tortor, consectetur ut nunc id, ullamcorper varius elit.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-3">
-                    <div class="card text-white bg-dark mb-3">
-                        <div class="card-header">Robin</div>
-                        <img src="https://i.pinimg.com/originals/4e/f4/36/4ef4364546beffe34e682c660a3f9c68.jpg" width="15px" class="card-img-top img-fluid img-thumbnail">
+                        <div class="card-header">Estelar</div>
+                        <img src="https://i0.wp.com/pipocamoderna.com.br/wp-content/uploads/2017/08/Starfire_titans9.jpg" width="15px" class="card-img-top img-fluid img-thumbnail">
                         <div class="card-body">
                             <h5 class="card-title"></h5>
                             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis felis ut ultricies volutpat. Donec eu tellus non mi placerat consequat quis sit amet eros. Pellentesque non nulla luctus, tempor augue quis, efficitur lacus. Vivamus aliquam risus enim, pellentesque porta nulla facilisis in. Vestibulum mi nisl, tincidunt et quam eget, varius lacinia metus. Curabitur at sapien nulla. Maecenas metus nisl, aliquam ut commodo a, pulvinar elementum est. Cras iaculis auctor euismod. Nunc quam dolor, commodo sed lacinia nec, dignissim vitae nibh. Cras at euismod ex, eget congue augue. Sed quis augue sem. Curabitur ante tortor, consectetur ut nunc id, ullamcorper varius elit.</p>
