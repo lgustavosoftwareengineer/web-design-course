@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Section 5 - Criando um formulário de busca</title>
+        <meta charset="utf-8" lang="pt-br">
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Imagem na aba do navegador-->
+        <link rel="shortcut icon" href="./public/img/favicon.ico" type="image/x-icon" />
+        <style>
+            * {
+                font-family: Gotham, Din, Sofia Pro;
+            }
+        </style>
+    </head>
+    <body>
+        <!--Navbar-->
+            <!--Toggler button só ira aparecer quando a tela for menor que large-->
+        <nav class="navbar navbar-dark bg-dark navbar-expand-lg fixed-top">
+            
+            <!--Logo do navbar-->
+            <a href="#" class="navbar-brand">
+                Navbar preta
+            </a>
+            
+            <!--Toggler-->
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!--Alvo do toggler-->
+            <div class="collapse navbar-collapse" id="menu">
+                <!--Lista de links da página-->
+                <ul class="navbar-nav ml-md-auto ">
+                    <!--Links-->
+                        <!--Link para a home-->
+                        <li class="nav-item">
+                            <a href="" class="nav-link active">
+                                Home
+                            </a>
+                        </li>
+                        <!--Link para o quem somos-->
+                        <li class="nav-item">
+                            <a href="" class="nav-link active">
+                                Quem somos
+                            </a>
+                        </li>
+                        
+                        <!--Formulário de busca-->
+                        <form action="" class="form-inline">
+                            
+                            <div class="input-group">
+                                <input type="text" name="buscar" id="" placeholder="Buscar">
+                                <input type="submit" value="buscar" class="btn btn-success input-group-append">
+                            </div>
+
+                        </form>
+                </ul>
+                
+            </div>
+
+
+        </nav>
+        <!--Navbar bottom
+            <!--Toggler button só ira aparecer quando a tela for menor que large-->
+            <nav class="navbar navbar-dark bg-danger fixed-bottom">
+            
+                <!--Logo do navbar-->
+                <a href="#" class="navbar-brand">
+                    Navbar preta
+                </a>
+                
+                <!--Toggler-->
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#menu2">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <!--Alvo do toggler-->
+                <div class="collapse navbar-collapse" id="menu2">
+                    <!--Lista de links da página-->
+                    <ul class="navbar-nav ml-md-auto ">
+                        <!--Links-->
+                            <!--Link para a home-->
+                            <li class="nav-item">
+                                <a href="" class="nav-link active">
+                                    Home
+                                </a>
+                            </li>
+                            <!--Link para o quem somos-->
+                            <li class="nav-item">
+                                <a href="" class="nav-link active">
+                                    Quem somos
+                                </a>
+                            </li>
+                            
+                            <!--Formulário de busca-->
+                            <form action="" class="form-inline">
+                                
+                                <div class="input-group">
+                                    <input type="text" name="buscar" id="" placeholder="Buscar">
+                                    <input type="submit" value="buscar" class="btn btn-success input-group-append">
+                                </div>
+    
+                            </form>
+                    </ul>
+                    
+                </div>
+    
+    
+            </nav>
+        <div class="container">
+            <p class="text-center" style="margin-top: 70px;">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus volutpat dolor nec laoreet posuere. Vestibulum non dapibus lectus, in aliquet turpis. Morbi non sollicitudin sapien. Vestibulum id sapien iaculis, feugiat velit nec, semper est. Donec eu pharetra erat, eu ornare felis. Integer vel nunc id risus laoreet varius eget sed nisl. Cras placerat nisl tincidunt arcu egestas convallis. Aliquam gravida massa id massa ultrices dapibus. Cras a tortor rutrum, ullamcorper risus convallis, ornare augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in tristique dolor. Nulla facilisi. Phasellus a nulla finibus nunc eleifend bibendum. Fusce non bibendum eros, id suscipit risus.
+
+Nunc id metus ac justo maximus interdum eget nec sem. Phasellus aliquam ipsum eu odio dapibus, eu tempor leo sodales. Vivamus malesuada congue diam sed lacinia. In dapibus nunc sit amet erat convallis, eu finibus turpis elementum. Etiam ac neque mauris. Mauris sed orci non ipsum dictum malesuada. Nulla venenatis, lectus vitae pretium tincidunt, turpis nisi feugiat nibh, in congue est elit id lectus. Aliquam tempor a arcu sit amet viverra. Curabitur eget sagittis justo, viverra tristique felis. Integer egestas suscipit porta. Donec pulvinar, ipsum eu feugiat tincidunt, nisl nibh commodo ante, et fringilla turpis nisl sed dolor. Nam ante metus, dictum at ante ac, elementum vestibulum justo. Pellentesque tempor sed neque aliquet pulvinar. Mauris augue felis, tincidunt sed eros ut, maximus hendrerit erat. Nam a arcu dignissim, finibus massa sit amet, aliquet risus. Ut scelerisque lectus et nisl bibendum, a sagittis lacus efficitur.
+
+Sed id augue mi. Maecenas blandit metus nec vulputate vehicula. Mauris auctor tellus blandit nulla auctor suscipit. Etiam euismod ex eget justo accumsan fringilla. Nunc eu aliquam felis. Curabitur volutpat rutrum mollis. Phasellus facilisis libero non consectetur tempus. Pellentesque mi velit, consequat sit amet felis quis, porta tristique diam. Suspendisse eu metus ac tortor sagittis gravida. Quisque commodo elit quis blandit molestie. Nullam in ex congue, dictum felis ut, tristique lacus. Sed cursus arcu malesuada, gravida nibh eget, ultricies eros.
+
+Suspendisse porttitor porttitor massa, vitae malesuada enim vehicula eu. In a sem augue. Fusce aliquet sodales urna ut eleifend. Nunc ante tellus, dapibus nec viverra eget, vehicula eu ipsum. Aliquam pharetra nisi in aliquam mollis. Nullam congue finibus leo, id consequat augue facilisis sit amet. Integer tempus tellus vitae magna elementum dictum. Phasellus fermentum lectus eget elit hendrerit, eget vulputate quam finibus.
+
+Etiam turpis ex, ornare ut magna vitae, egestas semper eros. Donec at tristique diam, eu lacinia turpis. Integer ipsum neque, lacinia in arcu ac, placerat rutrum dolor. Etiam ut condimentum risus, dictum viverra lacus. Nulla magna turpis, pretium nec lorem eu, vehicula blandit ante. Duis odio lacus, aliquet a urna et, fringilla consectetur felis. Curabitur cursus placerat auctor. Nullam tristique nibh eget ex congue condimentum. Donec ullamcorper, justo eget eleifend dignissim, urna nisl molestie eros, ac malesuada massa neque luctus velit. Etiam quis consectetur tellus. Suspendisse porta scelerisque ipsum. Donec condimentum, neque et interdum placerat, nulla lorem ultrices est, sit amet blandit nulla nulla vel sem. Sed quis nisi dapibus, efficitur mauris nec, gravida quam.
+            </p>
+        </div>
+        
+        
+        <footer></footer>
+    </body>
+    <!-- JAVASCRIPT -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</html>
